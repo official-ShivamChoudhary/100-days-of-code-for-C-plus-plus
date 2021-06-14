@@ -1,0 +1,2364 @@
+1.WAP to add 1 to n number without using formula.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,n,sum=0;
+	cout<<"\n Enter the nth number:-";
+	cin>>n;
+	for(i=0;i<=n;i++)
+	{
+		sum=sum+i;
+	}
+		cout<<"sum is:-"<<sum;
+	
+	getch();
+	
+}
+
+Output:-
+
+
+ Enter the nth number:-10
+
+ sum is:-55
+
+//<---------------------------------------------------------------------------->//
+
+2.  WAP Addition of two matrix.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],b[3][3],c[3][3],i,j;
+	cout<<"\n Enter the 9 number for a:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>a[i][j];
+			}
+			}
+	cout<<"\n Enter the 9 number for b:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>b[i][j];
+			}
+			}
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					c[i][j]=a[i][j]+b[i][j];
+					}
+					}
+					cout<<"\n Addition is:-\n";
+					for(i=0;i<3;i++)
+					{
+						for(j=0;j<3;j++)
+						{
+							cout<<" "<<c[i][j];
+						}
+						cout<<endl;
+					}
+					getch();
+				}
+				
+				
+						
+Output:-
+
+
+ Enter the 9 number for a:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Enter the 9 number for b:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Addition is:-
+ 2 4 6
+ 8 10 12
+ 14 16 18
+
+//<------------------------------------------------------------------------------------------->//
+
+3. WAP to print Addition of two numeber.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	c=a+b;
+	cout<<"\n Addition is:-"<<c;
+	getch();
+}
+
+Output:-
+
+
+ Enter the first number:-3
+
+ Enter the second number:-5
+
+ Addition is:-8
+
+//<-------------------------------------------------------------------------------------->//
+
+4. WAP to find the number is Armstrong number or Not.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,n,r,result=0;
+	cout<<"\n Enter the number:-";
+	cin>>n;
+	a=n;
+	while(a!=0)
+	{	 
+			r=a%10;
+			result=result+(r*r*r);
+	{
+			a=a/10;
+		}
+	}
+
+	
+	if(result==n)
+	cout<<"\n Armstrong number is:-"<<n;
+	else
+	cout<<"\n Not an Armstrong number is:-"<<n;
+	getch();
+}
+
+
+
+Output:-
+
+
+ Enter the number:-153
+
+ Armstrong number is:-153
+
+
+ Enter the number:-321
+
+ Not an Armstrong number is:-321
+
+//<---------------------------------------------------------------------------------------->//
+
+5. WAP to input one 3X3 array and then count total number of even or odd.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],i,j,even,odd;
+	cout<<"\n Enter the number:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>a[i][j];
+			}
+			}
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					if(a[i][j]%2==0)
+					even=even+1;
+					else
+					odd=odd+1;
+				}
+			}
+			cout<<"\n Even is:-"<<even;
+			cout<<"\n Odd is:-"<<odd;
+			getch();
+		}
+		
+		
+		
+					
+Output:-
+
+
+ Enter the number:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Even is:-4
+ Odd is:-5
+
+//<-------------------------------------------------------------------------------------------->//
+
+6. WAP to print Enter the marks of a student in five subjects and calculate the total aggregate.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int phy,che,math,eng,comp,avg,total;
+	cout<<"\n Enter the physics marks:-";
+	cin>>phy;
+	cout<<"\n Enter the chemistry marks:-";
+	cin>>che;
+    cout<<"\n Enter the mathematics marks:-";
+    cin>>math;
+    cout<<"\n Enter the english marks:-";
+    cin>>eng;
+    cout<<"\n Enter the computer marks:-";
+    cin>>comp;
+    avg=(phy+che+math+eng+comp)/5;
+    total=phy+che+math+eng+comp;
+    cout<<"\n Average is:-"<<avg;
+    cout<<"\n Total is:-"<<total;
+    getch();
+    
+    
+
+}
+
+Output:-
+
+
+ Enter the physics marks:-1
+
+ Enter the chemistry marks:-2
+
+ Enter the mathematics marks:-3
+
+ Enter the english marks:-4
+
+ Enter the computer marks:-5
+
+ Average is:-3
+ Total is:-15
+
+
+//<------------------------------------------------------------------------------------------->//
+
+7. WAP to print Addition,Substraction,Multiplication,Division By using Function.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	void sum(int,int);
+	void sub(int,int);
+        void mul(int,int);
+        void div(int,int);
+
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	sum(a,b);
+	sub(a,b);
+	mul(a,b);
+	div(a,b);
+	getch();
+	}
+	void sum(int a,int b)
+	{
+	int c;
+	c=a+b;
+	cout<<"\n Addition is:-"<<c;
+}
+	void sub(int a,int b)
+	{
+		int c;
+		c=a-b;
+	cout<<"\n Substraction is:-"<<c;
+}
+	void mul(int a,int b)
+	{
+		int c;
+		c=a*b;
+		cout<<"\n Multiplication is:-"<<c;
+	}
+	void div(int a,int b)
+	{
+		int c;
+		c=a/b;
+		cout<<"\n Division is:-"<<c;
+	}
+
+
+Output:-
+
+
+ Enter the first number:-1
+
+ Enter the second number:-2
+
+ Addition is:-3
+ Substraction is:--1
+ Multiplication is:-2
+ Division is:-0
+
+
+//<-------------------------------------------------------------------------------------------->//
+
+8. WAP to print Addition,Substraction,Multiplication,Division.
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c,sum,sub,mul,div;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	sum=a+b;
+	sub=a-b;
+	mul=a*b;
+	div=a/b;
+	cout<<"\n Addition is:-"<<sum;
+	cout<<"\n Substraction is:-"<<sub;
+        cout<<"\n Multiplication is:-"<<mul;
+	cout<<"\n Division is:-"<<div;	
+	getch();
+}
+
+
+Output:-
+
+
+
+ Enter the first number:-3
+
+ Enter the second number:-4
+
+ Addition is:-7
+ Substraction is:--1
+ Multiplication is:-12
+ Division is:-0
+
+//<------------------------------------------------------------------------------------------>//
+
+9. WAP to print Division of two number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	c=a/b;
+	cout<<"\n Division is:-"<<c;
+	getch();
+}
+
+Output:-
+
+
+ Enter the first number:-4
+
+ Enter the second number:-3
+
+ Division is:-1
+
+
+//<--------------------------------------------------------------------------------------------->//
+
+10. WAP to find out the number is even or odd.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+int a;
+cout<<"\n Check the given number is even or odd:-";
+cin>>a;
+if(a%2==0)
+cout<<"\n Even is:-"<<a;
+else
+cout<<"\n Odd is:-"<<a;
+getch();
+
+}
+
+
+Output:-
+
+
+ Check the given number is even or odd:-2
+
+ Even is:-2
+
+
+ Check the given number is even or odd:-3
+
+ Odd is:-3
+
+//<---------------------------------------------------------------------------------------------->//
+
+11. WAP to find fibonabi series.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,n,a=0,b=1,c;
+	cout<<"\n Enter the nth number:-";
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cout<<a;
+		c=a+b;
+		a=b;
+		b=c;
+		cout<<endl;
+	}
+	getch();
+}
+
+
+Output:-
+
+
+ Enter the nth number:-10
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+
+
+//<------------------------------------------------------------------------------------------>//
+
+12. WAP to print Addition of two number by using function.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	void sum(int,int);
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	sum(a,b);
+	getch();
+}
+void sum(int a,int b)
+{
+	int c;
+	c=a+b;
+	cout<<"\n Addition is:-"<<c;
+}
+
+Output:-
+
+
+ Enter the first number:-2
+
+ Enter the second number:-3
+
+ Addition is:-5
+
+//<-------------------------------------------------------------------------------------->//
+
+13. WAP to print Division of two number by using function.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	void div(int,int);
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	div(a,b);
+	getch();
+	}
+	void div(int a,int b)
+	{
+		int c;
+		c=a/b;
+		cout<<"\n Division is:-"<<c;
+	}
+	
+	
+Output:-
+
+
+ Enter the first number:-3
+
+ Enter the second number:-2
+
+ Division is:-1
+
+
+//<-------------------------------------------------------------------------------->//
+
+14. WAP to print Multiplication of two number by using function.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	void mul(int,int);
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	mul(a,b);
+	getch();
+	}
+	void mul(int a,int b)
+	{
+		int c;
+		c=a*b;
+		cout<<"\n Multiplication is:-"<<c;
+	}
+	
+	
+
+Output:-
+
+
+ Enter the first number:-2
+
+ Enter the second number:-3
+
+ Multiplication is:-6
+
+
+//<---------------------------------------------------------------------------------------------->//
+
+15. WAP to print Substraction of two number by using function.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	void sub(int,int);
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	sub(a,b);
+	getch();
+	}
+	void sub(int a,int b)
+	{
+		int c;
+		c=a-b;
+		cout<<"\n Substraction is:-"<<c;
+	}
+	
+	
+
+Output:-
+
+
+ Enter the first number:-3
+
+ Enter the second number:-4
+
+ Substraction is:--1
+
+
+
+//<----------------------------------------------------------------------------------------------->//
+
+16. WAP to calculate the gross salary when the 1% basic salary is given by 
+the user and the DA is the 16% of the basic salary and TA is 5% of base salary.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c,d;
+	cout<<"\n Enter the number:-";
+	cin>>a;
+	b=8*a/100;
+	c=16*a/100;
+	d=a+b+c;
+	cout<<"\n Gross Salary is:-"<<d;
+	getch();
+	
+}
+
+Output:-
+
+ Enter the number:-1000
+
+ Gross Salary is:-1210
+
+
+
+//<------------------------------------------------------------------------------>//
+
+17. WAP to print Hello C++.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	cout<<"Hello c++";
+getch();
+
+
+}
+
+Output:-
+
+Hello c++
+
+
+//<-------------------------------------------------------------------------------->>//
+
+18. WAP to input 3X3 matrix.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],i,j;
+	cout<<"\n Enter the number:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>a[i][j];
+			}
+			}
+			cout<<"\n Input numbers are:-\n";
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					cout<<" "<<a[i][j];
+					
+					}
+					cout<<endl;
+					}
+					getch();
+					}
+					
+		
+
+Output:-
+
+
+ Enter the number:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Input numbers are:-
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+
+
+//<------------------------------------------------------------------------------------------>//
+
+19. WAP to find largest ar maximum number from 3X3 matrix.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],i,j,max=0;
+	cout<<"\n Enter the number:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>a[i][j];
+			}
+			}
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					if(a[i][j]>=max)
+				max=a[i][j];
+				}
+				}
+				cout<<"\n Largest number is:-"<<max;
+				getch();
+				}
+				
+			
+Output:-
+
+
+ Enter the number:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Largest number is:-9
+
+
+
+//<-------------------------------------------------------------------------------------------->//
+
+20.  WAP to find whether a given year is a leap year or not.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int year;
+	cout<<"\n Enter the year:-";
+	cin>>year;
+	if((year%4==0) && (year%100!=0) || (year%4==0))
+	cout<<"\n Leap year is:-"<<year;
+	else
+	cout<<"\n Not a Leap year is:-"<<year;
+	getch();
+}
+
+Output:-
+
+
+
+ Enter the year:-2000
+
+ Leap year is:-2000
+
+
+ Enter the year:-2001
+
+ Not a Leap year is:-2001
+
+
+//<------------------------------------------------------------------------------------>//
+
+21.  WAP to input three distinct integer number and then print the largest among three distinct number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c,max;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	cout<<"\n Enter the third number:-";
+	cin>>c;
+	max=a;
+	if(b>=max)
+	max=b;
+	if(c>=max)
+	max=c;
+	cout<<"\n Largest number is:-"<<max;
+	getch();
+}
+
+Output:-
+
+
+ Enter the first number:-2
+
+ Enter the second number:-3
+
+ Enter the third number:-4
+
+ Largest number is:-4
+
+
+//<------------------------------------------------------------------------------------------>//
+
+22. WAP to print Multiplication of 3*3 matrix.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],b[3][3],c[3][3],i,j,k;
+	cout<<"\n Enter the 9 number for a:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>a[i][j];
+			}
+			}
+			cout<<"\n Enter the 9 number for b:-";
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					cin>>b[i][j];
+					}
+					}
+					for(i=0;i<3;i++)
+					{
+					for(j=0;j<3;j++)
+					{
+						c[i][j]=0;
+						
+							for(k=0;k<3;k++)
+							{
+							
+							c[i][j]=c[i][j]+a[i][j]*b[k][j];
+							}
+							}
+							}
+							cout<<"\n Multiplication is:-\n";
+							for(i=0;i<3;i++)
+							{
+								for(j=0;j<3;j++)
+								{
+									cout<<" "<<c[i][j];
+									}
+									cout<<endl;
+									}
+									getch();
+									}
+									
+									
+						
+
+Output:-
+
+
+ Enter the 9 number for a:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Enter the 9 number for b:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Multiplication is:-
+ 12 30 54
+ 48 75 108
+ 84 120 162
+
+
+//<------------------------------------------------------------------------------------->//
+
+23. WAP to print Multiplication of two number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	c=a*b;
+	cout<<"\n Multiplication is:-"<<c;
+	getch();
+}
+
+Output:-
+
+
+ Enter the first number:-2
+
+ Enter the second number:-3
+
+ Multiplication is:-6
+
+
+//<----------------------------------------------------------------------------------------------->//
+
+24. WAP to print Number Pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j;
+	for(i=1;i<=5;i++)
+	{
+		cout<<endl;
+		for(j=1;j<=i;j++)
+		{
+			cout<<" "<<i;
+		}
+	}
+	getch();
+}
+
+	
+Output:-
+
+
+ 1
+ 2 2
+ 3 3 3
+ 4 4 4 4
+ 5 5 5 5 5
+
+
+//<------------------------------------------------------------------------------------------->//
+
+25. WAP to print number pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j;
+	for(i=1;i<=5;i++)
+	{
+		cout<<endl;
+		for(j=1;j<=i;j++)
+		{
+			cout<<" "<<j;
+		}
+	}
+	getch();
+}
+
+	
+
+Output:-
+
+
+ 1
+ 1 2
+ 1 2 3
+ 1 2 3 4
+ 1 2 3 4 5
+
+
+//<----------------------------------------------------------------------------------------->//
+
+26. WAP to print 1 to n number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i;
+	for(i=1;i<=10;i++)
+	{
+		cout<<i;
+	
+	cout<<endl;
+}
+	getch();
+	
+}
+
+	
+
+Output:-
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+
+//<------------------------------------------------------------------------------------------->//
+
+27. WAP to check whether a number is palindrome or not a palindrome.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+	int main()
+	{
+		int a,n,r,rev=0;
+		cout<<"\n Enter the number:-";
+		cin>>n;
+		a=n;
+		while(n>0)
+		{
+			r=n%10;
+			rev=rev*10+r;
+			{
+				n=n/10;
+			}
+		}
+		if(a==rev)
+			cout<<"\n Palindrome number is:-"<<a;
+			else
+			cout<<"\n Not a Palindrome number is:-"<<a;
+			
+			getch();
+			
+		}
+
+Output:-
+
+ Enter the number:-121
+
+ Palindrome number is:-121
+
+ Enter the number:-123
+
+ Not a Palindrome number is:-123
+
+//<-------------------------------------------------------------------------------------->//
+
+28. WAP to print star pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j;
+	for(i=1;i<=5;i++)
+	{
+		for(j=5;j>=i;j--)
+		{
+			cout<<" * ";
+		}
+		cout<<endl;
+	}
+	getch();
+}
+
+
+Output:-
+
+*  *  *  *  *
+ *  *  *  *
+ *  *  *
+ *  *
+ *
+
+
+//<-------------------------------------------------------------------------------------->//
+
+29. WAP to print Number pattern.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j,k;
+	for(i=1;i<=5;i++)
+	{
+		cout<<endl;
+		for(j=5;j>=i;j--)
+		cout<<" ";
+		{
+			for(k=1;k<=i;k++)
+			cout<<i;
+		}
+	}
+	getch();
+}
+
+	
+Output:-
+
+
+     1
+    22
+   333
+  4444
+ 55555
+
+
+
+//<---------------------------------------------------------------------------------------------->//
+
+30. WAP to find the number is perfect number or Not.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i=1,num,sum=0;
+	cout<<"\n Enter the number:-";
+	cin>>num;
+	while(i<num)
+	{
+		if(num%i==0)
+		{
+			sum=sum+i;
+		}
+		i++;
+	}
+	if(sum==num)
+	cout<<"\n Perfect number is:-"<<num;
+	else
+	cout<<"\n Not a perfect number is:-"<<num;
+	getch();
+}
+
+	
+
+Output:-
+
+
+ Enter the number:-314
+
+ Not a perfect number is:-314
+
+
+ Enter the number:-6
+
+ Perfect number is:-6
+
+
+//<---------------------------------------------------------------------------------------------->//
+
+31. WAP to input one number and then decide number is positive or negative.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a;
+	cout<<"\n Check the given number is negative or positive:-";
+	cin>>a;
+	if(a>=0)
+		cout<<"\n Number is positive";
+		else
+		cout<<"\n Number is Negative";
+		getch();
+		
+	}
+
+Output:-
+
+
+ Check the given number is negative or positive:-3
+
+ Number is positive
+
+
+
+ Check the given number is negative or positive:--4
+
+ Number is Negative
+
+
+//<--------------------------------------------------------------------------------------------->//
+
+32. WAP for printing all prime number up to nth number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j,n,fact;
+	for(i=2;i<=20;i++)
+	{
+		fact=1;
+		for(j=2;j<=i/2;j++)
+		{
+			if(i%j==0)
+		{
+			fact=0;
+			break;
+		}
+	}
+		if(fact==1)
+	{
+	
+		cout<<i;
+}
+        cout<<" ";
+}
+		getch();
+	}
+	
+	
+	
+		
+Output:-
+
+2 3  5  7    11  13    17  19
+
+
+//<----------------------------------------------------------------------------------------->//
+
+33. WAP to print Number pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j,k;
+	for(i=1;i<=5;i++)
+	{
+		for(j=5;j>=i;j--)
+		cout<<" ";
+		{
+		for(k=1;k<=i;k++)
+		cout<<k;
+		}
+		cout<<endl;
+	}
+	getch();
+}
+
+
+Output:-
+
+     1
+    12
+   123
+  1234
+ 12345
+
+
+//<---------------------------------------------------------------------------------------------------->//
+
+34. WAP to calculate simple interest of 8% and find the total capital.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	cout<<"\n Enter the First number:-";
+	cin>>a;
+	b=8*a/100;
+	c=a+8*a/100;
+	cout<<"\n Interest is:-"<<b;
+	cout<<"\n Total is:-"<<c;
+	getch();
+}
+
+Output:-
+
+
+ Enter the First number:-1000
+
+ Interest is:-80
+ Total is:-1080
+
+
+
+//<----------------------------------------------------------------------------------------------->//
+
+35.  WAP to input three distinct integer number and then print the smallest among three distinct number.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c,min;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	cout<<"\n Enter the third number:-";
+	cin>>c;
+	min=a;
+	if(b<=min)
+	min=b;
+	if(c<=min)
+	min=c;
+	cout<<"\n Smallest number is:-"<<min;
+	getch();
+}
+
+
+Output:-
+
+
+ Enter the first number:-2
+
+ Enter the second number:-4
+
+ Enter the third number:-3
+
+ Smallest number is:-2
+
+
+//<----------------------------------------------------------------------------------------------->//
+
+36. WAP to print Star pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j;
+	for(i=1;i<=5;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			cout<<" * ";
+		}
+		cout<<endl;
+	}
+	getch();
+}
+
+Output:-
+
+
+ *
+ *  *
+ *  *  *
+ *  *  *  *
+ *  *  *  *  *
+
+
+//<------------------------------------------------------------------------------------------->//
+
+37. WAP to print square pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j;
+	for(i=1;i<=5;i++)
+	{
+		for(j=1;j<=5;j++)
+		{
+			j>=i;
+		    cout<<" * ";
+		}
+		cout<<endl;
+	}
+	getch();
+}
+
+
+Output:-
+
+ *  *  *  *  *
+ *  *  *  *  *
+ *  *  *  *  *
+ *  *  *  *  *
+ *  *  *  *  *
+
+//<----------------------------------------------------------------------------------------------------->>//
+
+38. WAP to find out the student is eligible by through out 60%.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	float a,b,c;
+	cout<<"\n Enter the class 10th marks:-";
+	cin>>a;
+	cout<<"\n Enter the class 12th marks:-";
+	cin>>b;
+	cout<<"\n Enter the class B.tech marks:-";
+	cin>>c;
+	if((a>=60) && (b>=60) || (c>=60))
+	cout<<"\n You are elisible";
+	else
+	cout<<"\n You are not elisible";
+	getch();
+}
+	
+
+Output:-
+
+
+
+ Enter the class 10th marks:-76
+
+ Enter the class 12th marks:-70.8
+
+ Enter the class B.tech marks:-8.48
+
+ You are elisible
+
+
+
+ Enter the class 10th marks:-45
+
+ Enter the class 12th marks:-34
+
+ Enter the class B.tech marks:-23
+
+ You are not elisible
+
+
+//<-------------------------------------------------------------------------------------------->//
+
+39. WAP to print Substraction of two number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c;
+	cout<<"\n Enter the first number:-";
+	cin>>a;
+	cout<<"\n Enter the second number:-";
+	cin>>b;
+	c=a-b;
+	cout<<"\n Substraction is:-"<<c;
+	getch();
+}
+
+
+Output:-
+
+
+
+ Enter the first number:-3
+
+ Enter the second number:-4
+
+ Substraction is:--1
+
+
+//<--------------------------------------------------------------------------------------------------->//
+
+40. WAP to swap two number by using third variable.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+int a,b,c;
+cout<<"\n Enter the first number:-";
+cin>>a;
+cout<<"\n Enter the second number:-";
+cin>>b;
+c=a;
+a=b;
+b=c;
+cout<<"\n Swap is:-"<<a<<" "<<b;
+getch();
+}
+
+
+Output:-
+
+
+ Enter the first number:-3
+
+ Enter the second number:-2
+
+ Swap is:-2 3
+
+
+//<-------------------------------------------------------------------------------------------------->//
+
+41. WAP to print working of timer.
+
+Source code:-
+
+#include<iostream>
+#include<stdlib.h>
+#include<unistd.h>
+using namespace std;
+int main()
+{
+	int min=40,sec=0;
+	while(true)
+	{
+		system("cls");
+		cout<<"\t"<<"Timer" <<" = " <<min<<" : "<<sec<<endl;
+		sec++;
+		if(sec==60)
+		{
+		//	min--;
+			sec=0;
+			if(sec==60)
+			{
+				min-1;
+				
+				}
+			}
+		usleep(1000000);
+	}
+	return 0;
+}
+
+
+
+//<----------------------------------------------------------------------------------------------->//
+
+42. WAP in c++ to print the transpose of given 3X3 matrix.
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a[3][3],i,j,t;
+	cout<<"\n Enter the number:-";
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			cin>>a[i][j];
+			}
+			}
+			for(i=0;i<3;i++)
+			{
+				for(j=0;j<3;j++)
+				{
+					t=a[i][j];
+					a[i][j]=a[j][i];
+					a[j][i]=t;
+					}
+					}
+					cout<<"\n Transpose is:-\n";
+					for(i=0;i<3;i++)
+					{
+						for(j=0;j<3;j++)
+						{
+							cout<<" "<<a[j][i];
+							}
+							cout<<endl;
+							}
+							getch();
+							}
+							
+							
+							
+
+Output:-
+
+
+ Enter the number:-1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ Transpose is:-
+ 1 4 7
+ 2 5 8
+ 3 6 9
+
+
+
+
+//<---------------------------------------------------------------------------------------------------->//
+
+43. WAP to print star pattern.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j;
+	for(i=5;i>=1;i--)
+	{
+		for(j=1;j<=5;j++)
+		{
+			if(j<=i)
+		    cout<<" ";
+		else
+		cout<<"*";
+	}
+		cout<<endl;
+	}
+	getch();
+}
+
+
+
+Output:-
+
+
+    *
+   **
+  ***
+ ****
+
+
+//<-------------------------------------------------------------------------------------------------------->//
+
+44. WAP to determine whether an entered character is a vowel using switch case.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	char ch;
+	cout<<"\n Enter the character:-";
+	cin>>ch;
+	switch (ch)
+	{
+		case 'a':
+			case'A':
+				cout<<"\n c is a vowel of:-"<<ch;
+				break;
+				case 'e':
+					case 'E':
+						cout<<"\n c is a vowel of:-"<<ch;
+						break;
+						case 'i':
+							case 'I':
+								cout<<"\n c is a vowel of:-"<<ch;
+								break;
+								case 'o':
+									case 'O':
+										cout<<"\n c is a vowel of:-"<<ch;
+										break;
+										case 'u':
+											case 'U':
+												cout<<"\n c is a vowel of:-"<<ch;
+												break;
+											
+												defaut:
+													cout<<"\n c is not a vowel of:-"<<ch;
+											}	
+										getch();
+	}
+
+
+Output:-
+
+
+ Enter the character:-A
+
+ c is a vowel of:-A
+
+
+
+//<-------------------------------------------------------------------------------------------------------------------------------------------------------->//
+
+45. WAP to print monday, tuesday, wednesday, thrusday, friday, saturday, sunday by using switch case.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int n;
+	cout<<"\n Enter the number:-";
+	cin>>n;
+	switch (n)
+	{
+		case 1:
+			cout<<"\n Monday";
+			break;
+		case 2:
+			cout<<"\n Tuesday";
+			break;
+		case 3:
+			cout<<"\n Wednesday";
+			break;
+		case 4:
+			cout<<"\n Thrusday";
+			break;
+		case 5:
+		    cout<<"\n Friday";
+			break;
+		case 6:
+		    cout<<"\n Saturday";
+			break;
+		case 7:
+		    cout<<"\n Sunday";
+			break;
+		
+	    defalt :
+			cout<<"\n Week has only 7 days";
+	}
+			getch();
+}
+
+
+
+Output:-
+
+
+
+ Enter the number:-2
+
+ Tuesday
+
+
+
+
+//<----------------------------------------------------------------------------------------------------------->//
+
+
+46. WAP to print no of week in a month.
+           print no of week in a year.
+           print no of month in a year.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int wm,wy,my;
+	wm=30/7;
+	wy=365/7;
+	my=365/30;
+	cout<<"\n Week in a month is:-"<<wm;
+	cout<<"\n Week in a year is:-"<<wy;
+	cout<<"\n Month in a year is:-"<<my;
+	getch();
+}
+
+
+Output:-
+
+
+ Week in a month is:-4
+ Week in a year is:-52
+ Month in a year is:-12
+
+
+//<--------------------------------------------------------------------------------------------------------->//
+
+
+47. WAP to convert kilometer to meter and vice versa.
+
+Source code:-
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	float km,m;
+	cout<<"\n Enter the kilometer:-";
+	cin>>km;
+	m=km*1000;
+	cout<<"\n meter is:-"<<m;
+	cout<<"\n Enter the meter:-";
+	cin>>m;
+	km=m/1000;
+	cout<<"\n kilometer is:-"<<km;
+	getch();
+}
+
+
+Output:-
+
+
+ Enter the kilometer:-100
+
+ meter is:-100000
+ Enter the meter:-4500
+
+ kilometer is:-4.5
+
+
+
+//<--------------------------------------------------------------------------------------------------------->//
+
+48. WAP to Implement bubble sort technique.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,j,temp;
+	int arr[5];
+	for(i=0;i<5;i++)
+	{
+		cout<<"\n Enter into index:-";
+		cin>>arr[i];
+		}
+		cout<<"\n Display you have entered:-";
+		for(i=0;i<5;i++)
+		{
+		cout<<" "<<arr[i];
+	}
+		cout<<"\n Display result after sorting:-";
+		for(i=0;i<5-1;i++)
+		{
+			for(j=i+1;j<5;j++)
+			{
+				if(arr[i]>arr[j])
+				{
+				temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+				}
+				}
+				}
+				for(i=0;i<5;i++)
+				{
+					cout<<" "<<arr[i];
+					}
+					getch();
+					}
+					
+
+Output:-
+
+
+ Enter into index:-5
+
+ Enter into index:-4
+
+ Enter into index:-3
+
+ Enter into index:-2
+
+ Enter into index:-1
+
+ Display you have entered:- 5 4 3 2 1
+ Display result after sorting:- 1 2 3 4 5
+
+
+49. WAP to find a number using linear search technique.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int i,n;
+	int arr[5];
+	char found='F';
+	for(i=0;i<5;i++)
+	{
+	cout<<"\n Enter into index:-";
+	cin>>arr[i];
+	}
+	cout<<"\n Display you have entered:-";
+	for(i=0;i<5;i++)
+	{
+		cout<<" "<<arr[i];
+		}
+		cout<<"\n Enter the number you want to search:-";
+		cin>>arr[i];
+		for(i=0;i<5;i++)
+		{
+			if(arr[i]==n)
+			{
+				found='T';
+				cout<<"\n The number is found at index is:-"<<i;
+				break;
+			}
+		}
+		if(found=='F')
+		cout<<"\n The number is not found at index:-";
+		getch();		
+			}
+			
+
+Output:-
+
+
+ Enter into index:-5
+
+ Enter into index:-4
+
+ Enter into index:-3
+
+ Enter into index:-2
+
+ Enter into index:-1
+
+ Display you have entered:- 5 4 3 2 1
+ Enter the number you want to search:-1
+
+ The number is found at index is:-4
+
+
+50. WAP to find a number using binary search technique.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	char found='F';
+	int arr[5];
+	int i,j,n,temp,mid,low,high;
+	for(i=0;i<5;i++)
+	{
+		cout<<"\n Enter into index:-";
+		cin>>arr[i];
+	}
+	for(i=0;i<5-1;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+				}
+				}
+				}
+				cout<<"\n You have entered:-";
+				for(i=0;i<5;i++)
+				{
+					cout<<" "<<arr[i];
+				}
+				cout<<"\n Enter the number you want to search:-";
+				cin>>n;
+				low=0;
+					high=5-1;
+					while(low<=high)
+					{
+						mid=(low+high)/2;
+						if(n<arr[mid])
+						high=mid-1;
+						else
+						if(n>arr[mid])
+						low=mid+1;
+						else
+						{
+							found='T';
+							
+						cout<<"\n the number is found at index is:-"<<mid;
+							break;
+							}
+							}
+							if(found=='F')
+							cout<<"\n the number is not found at index";
+							getch();
+							}
+				
+
+Output:-
+
+
+ Enter into index:-9
+
+ Enter into index:-1
+
+ Enter into index:-5
+
+ Enter into index:-2
+
+ Enter into index:-4
+
+ You have entered:- 1 2 4 5 9
+ Enter the number you want to search:-9
+
+ the number is found at index is:-4
+
+
+51. WAP to print the ASCII value of a character.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	char ch;
+	cout<<"\n Enter the character:-";
+	cin>>ch;
+	cout<<"\n Ascii value of"<<" "<<ch<<" "<<"is"<<":-"<<int (ch);
+	getch();
+}
+
+Output:-
+
+
+ Enter the character:-A
+
+ Ascii value of A is:-65
+
+
+ Enter the character:-a
+
+ Ascii value of a is:-97
+
+
+52. WAP to find the largest of three number using ternarry operator.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c,max;
+	cout<<"\n Enter the First number:-";
+	cin>>a;
+	cout<<"\n Enter the Second number:-";
+	cin>>b;
+	cout<<"\n Enter the Third number:-";
+	cin>>c;
+	max=a>b?(a>c?a:c):(b>c?b:c);
+	cout<<"\n Largest number is:-"<<max;
+	getch();
+}
+
+
+
+Output:-
+
+
+ Enter the First number:-2
+
+ Enter the Second number:-7
+
+ Enter the Third number:-5
+
+ Largest number is:-7
+
+
+53. WAP to find the smallest of three number using ternarry operator.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,c,min;
+	cout<<"\n Enter the First number:-";
+	cin>>a;
+	cout<<"\n Enter the Second number:-";
+	cin>>b;
+	cout<<"\n Enter the Third number:-";
+	cin>>c;
+	min=a<b?(a<c?a:c):(b<c?b:c);
+	cout<<"\n Smallest number is:-"<<min;
+	getch();
+}
+
+
+Output:-
+
+
+ Enter the first number:-5
+
+ Enter the second number:-9
+
+ Enter the third number:-7
+
+ Smallest number is:-5
+
+
+54. WAP to print the reverse of a number.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,rev;
+	cout<<"\n Enter the number:-";
+	cin>>a;
+	while(a!=0)
+	{
+		rev=a%10;
+		cout<<rev;
+		a=a/10;
+}
+		getch();
+		
+	}
+		
+
+
+Output:-
+
+
+ Enter the number:-1063
+3601
+
+55. WAP using for loop to print all the number from m to n there by classifying them as even odd.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b,i;
+	cout<<"\n Enter the value of a:-";
+	cin>>a;
+	cout<<"\n Enter the value ob b:-";
+	cin>>b;
+	for(i=a;i<=b;i++)
+	{
+		if(i%2==0)
+		cout<<"\n Even is:-"<<i;
+		else
+		cout<<"\n Odd is:-"<<i;
+	}
+	getch();
+}
+
+
+Output:-
+
+
+ Enter the value of a:-2
+
+ Enter the value ob b:-20
+
+ Even is:-2
+ Odd is:-3
+ Even is:-4
+ Odd is:-5
+ Even is:-6
+ Odd is:-7
+ Even is:-8
+ Odd is:-9
+ Even is:-10
+ Odd is:-11
+ Even is:-12
+ Odd is:-13
+ Even is:-14
+ Odd is:-15
+ Even is:-16
+ Odd is:-17
+ Even is:-18
+ Odd is:-19
+ Even is:-20
+
+
+56.WAP to print swap two variable without using third variable.
+
+Source code:-
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int main()
+{
+	int a,b;
+	cout<<"\n Enter the First number:-";
+	cin>>a;
+	cout<<"\n Enter the Second number:-";
+	cin>>b;
+	cout<<"\n Swap is:-"<<b<<" "<<a;
+	getch();
+}
+
+
+Output:-
+
+
+ Enter the first number:-4
+
+ Enter the second number:-5
+
+ Swap is:-5 4
+
+
+
+
+
+
