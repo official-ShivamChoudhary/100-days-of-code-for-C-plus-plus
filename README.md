@@ -61,6 +61,7 @@
 53. WAP to find the smallest of three number using ternarry operator.
 54. WAP to print the reverse of a number.
 55. WAP using for loop to print all the number from m to n there by classifying them as even odd.
+
 56.WAP to print swap two variable without using third variable.
 
 
